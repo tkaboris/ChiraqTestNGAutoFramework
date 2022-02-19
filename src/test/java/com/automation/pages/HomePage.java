@@ -7,7 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class HomePage {
+import java.util.List;
+
+public class HomePage extends BasePage {
 
     @FindBy(className = "app_logo")
     WebElement homePageLogo;
@@ -21,12 +23,16 @@ public class HomePage {
     @FindBy(id = "logout_sidebar_link")
     WebElement logoutLink;
 
-    WebDriver driver;
+    @FindBy(xpath = "//div[@class='inventory_item_name']")
+    List<WebElement> listOfProduct;
 
-    public HomePage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+
+
+    public List<WebElement> getListOfProduct(){
+        return listOfProduct;
     }
+
+
     public void verifyHomePage(){
 
         Assert.assertTrue(homePageLogo.isDisplayed(), "Logo is missing from page");
@@ -42,5 +48,9 @@ public class HomePage {
     public void clickOnLogoutLink(){
 
         logoutLink.click();
+    }
+
+    public void verifyEachProductNavigation(){
+
     }
 }

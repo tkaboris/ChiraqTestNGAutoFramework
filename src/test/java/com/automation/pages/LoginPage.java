@@ -1,6 +1,7 @@
 package com.automation.pages;
 
 import com.automation.test.LoginTest;
+import com.automation.utils.PropertyReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
 
     @FindBy(id="user-name")
     WebElement userNameEle;
@@ -19,17 +20,12 @@ public class LoginPage {
     @FindBy(id="login-button")
     WebElement loginBtn;
 
-    WebDriver driver;
-//create constructor take paramenter , this driver we get from test
-    public LoginPage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
 
+//create constructor take paramenter , this driver we get from test
 
     public void doLogin(){
-        userNameEle.sendKeys("standard_user");
-        passwordEle.sendKeys("secret_sauce");
+        userNameEle.sendKeys(PropertyReader.getProperty("login.username"));
+        passwordEle.sendKeys(PropertyReader.getProperty("login.password"));
         loginBtn.click();
     }
 
