@@ -26,14 +26,12 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='inventory_item_name']")
     List<WebElement> listOfProduct;
 
+    @FindBy(xpath = "//div[text()='Sauce Labs Backpack']")
+    WebElement itemLink;
 
 
-    public List<WebElement> getListOfProduct(){
-        return listOfProduct;
-    }
 
-
-    public void verifyHomePage(){
+    public void verifyPage(){
 
         Assert.assertTrue(homePageLogo.isDisplayed(), "Logo is missing from page");
         Assert.assertTrue(homePageTitle.isDisplayed(), "title is missing from hommepage");
@@ -50,7 +48,8 @@ public class HomePage extends BasePage {
         logoutLink.click();
     }
 
-    public void verifyEachProductNavigation(){
 
+    public void clickOnItem() {
+        itemLink.click();
     }
 }

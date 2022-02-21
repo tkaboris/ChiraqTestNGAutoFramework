@@ -1,12 +1,8 @@
 package com.automation.pages;
 
-import com.automation.test.LoginTest;
 import com.automation.utils.PropertyReader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class LoginPage extends BasePage{
@@ -29,7 +25,7 @@ public class LoginPage extends BasePage{
         loginBtn.click();
     }
 
-    public void verifyLoginPage(){
+    public void verifyPage(){
 
         Assert.assertTrue(userNameEle.isDisplayed(), "Username input is missing from login page");
         Assert.assertTrue(passwordEle.isDisplayed(), "password input is missing from login page");

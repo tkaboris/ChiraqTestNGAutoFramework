@@ -6,20 +6,20 @@
     <groups>
     </groups>
     <test name="TestNGAutomationFramework" duration-ms="2963" started-at="2022-02-19T02:35:50Z" finished-at="2022-02-19T02:35:53Z">
-      <class name="com.automation.test.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automation.test.LoginTest@2a18f23c]" name="setUp" is-config="true" duration-ms="1848" started-at="2022-02-19T02:35:50Z" finished-at="2022-02-19T02:35:52Z">
+      <class name="com.automation.tests.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@2a18f23c]" name="setUp" is-config="true" duration-ms="1848" started-at="2022-02-19T02:35:50Z" finished-at="2022-02-19T02:35:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyUserCanLogin()[pri:0, instance:com.automation.test.LoginTest@2a18f23c]" name="verifyUserCanLogin" duration-ms="341" started-at="2022-02-19T02:35:52Z" finished-at="2022-02-19T02:35:52Z">
+        <test-method status="PASS" signature="verifyUserCanLogin()[pri:0, instance:com.automation.tests.LoginTest@2a18f23c]" name="verifyUserCanLogin" duration-ms="341" started-at="2022-02-19T02:35:52Z" finished-at="2022-02-19T02:35:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserCanLogin -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.automation.test.LoginTest@2a18f23c]" name="cleanUp" is-config="true" duration-ms="758" started-at="2022-02-19T02:35:52Z" finished-at="2022-02-19T02:35:53Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.automation.tests.LoginTest@2a18f23c]" name="cleanUp" is-config="true" duration-ms="758" started-at="2022-02-19T02:35:52Z" finished-at="2022-02-19T02:35:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-      </class> <!-- com.automation.test.LoginTest -->
+      </class> <!-- com.automation.tests.LoginTest -->
     </test> <!-- TestNGAutomationFramework -->
   </suite> <!-- Default Suite -->
 </testng-results>
